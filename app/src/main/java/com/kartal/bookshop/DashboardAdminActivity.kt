@@ -26,7 +26,7 @@ class DashboardAdminActivity : AppCompatActivity() {
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
-            
+
         }
 
     }
