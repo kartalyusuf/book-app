@@ -121,7 +121,7 @@ class LoginActivity : AppCompatActivity() {
                         //its simple admin , open admin dashboard
                         startActivity(Intent(this@LoginActivity , DashboardAdminActivity::class.java))
                         finish()
-                        
+
 
                     }
                 }
