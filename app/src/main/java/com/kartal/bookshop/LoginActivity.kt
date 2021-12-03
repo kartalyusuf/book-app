@@ -41,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
         //handle click , not have a account go to register screen
         binding.noAccountTv.setOnClickListener {
 
+            startActivity(Intent(this,RegisterActivity::class.java))
         }
 
         //handle click login

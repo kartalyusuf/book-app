@@ -49,4 +49,42 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/bottomLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/addCategoryBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button01"
+            android:minHeight="50dp"
+            android:text="+ Add Category"
+            android:textAllCaps="false"
+            android:layout_marginEnd="10dp"
+            android:textColor="#fff"/>
+
+
+        <!-- Add Pdf -->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addPdfFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            app:fabCustomSize="50dp"
+            android:src="@drawable/ic_pdf_white"
+            android:tint="#fff"/>
+
+
+
+    </LinearLayout>
+
 </RelativeLayout>

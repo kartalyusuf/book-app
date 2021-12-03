@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kartal.bookshop">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -8,19 +11,45 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.BookShop">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
             android:name=".SplashActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <activity android:name=".MainActivity"/>
+
+        <activity android:name=".MainActivity">
+
+
+        </activity>
+
+            <activity android:name=".LoginActivity">
+
+        </activity>
+
+        <activity android:name=".RegisterActivity">
+
+
+        </activity>
+
+        <activity android:name=".DashboardUserActivity">
+
+
+        </activity>
+
+        <activity android:name=".DashboardAdminActivity">
+
+            
+        </activity>
+
 
     </application>
 

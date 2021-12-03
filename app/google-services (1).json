@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "883265758225",
+    "firebase_url": "https://book-shop-kotlin-default-rtdb.firebaseio.com",
+    "project_id": "book-shop-kotlin",
+    "storage_bucket": "book-shop-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883265758225:android:130863c42d49c3d10d7db0",
+        "android_client_info": {
+          "package_name": "com.kartal.bookshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883265758225-b3ee7c9nobuircouaja79o8f95249svd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAH7joq6ITlAnY9oyAE_y2_a_tYzrhha0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883265758225-b3ee7c9nobuircouaja79o8f95249svd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
