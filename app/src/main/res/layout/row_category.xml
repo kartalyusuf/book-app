@@ -31,7 +31,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_delete_white"
-            android:background="@drawable/shape_button03"
+            android:background="@drawable/shape_button03"/>
 
     </LinearLayout>
 
