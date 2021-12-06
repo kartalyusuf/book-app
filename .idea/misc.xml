@@ -9,6 +9,7 @@
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/drawable/ic_email.xml" value="0.38177083333333334" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/drawable/ic_lock.xml" value="0.38177083333333334" />
+        <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/drawable/shape_button03.xml" value="0.38177083333333334" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/drawable/shape_edittext01.xml" value="0.38177083333333334" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/drawable/shape_toolbar01.xml" value="0.38177083333333334" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/layout/activity_category_add.xml" value="0.3645833333333333" />
@@ -17,6 +18,7 @@
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/layout/activity_login.xml" value="0.365625" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/layout/activity_register.xml" value="0.365625" />
+        <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-app/app/src/main/res/layout/row_category.xml" value="0.35507246376811596" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-shop/app/src/main/res/layout/activity_main.xml" value="0.29528985507246375" />
         <entry key="..\:/ProgramFiles/AndroidStudioProjects/BookShop/book-shop/app/src/main/res/layout/activity_splash.xml" value="0.29528985507246375" />
       </map>
