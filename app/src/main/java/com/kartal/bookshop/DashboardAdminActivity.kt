@@ -13,6 +13,9 @@ class DashboardAdminActivity : AppCompatActivity() {
     //firebase auth
     private lateinit var firebaseAuth: FirebaseAuth
 
+    //arraylist to hold categories
+    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardAdminBinding.inflate(layoutInflater)
@@ -26,6 +29,7 @@ class DashboardAdminActivity : AppCompatActivity() {
         binding.logoutBtn.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
+            loadCategories()
 
         }
 
@@ -34,6 +38,10 @@ class DashboardAdminActivity : AppCompatActivity() {
             startActivity(Intent(this, CategoryAddActivity :: class.java))
 
         }
+
+    }
+
+    private fun loadCategories() {
 
     }
 
