@@ -3,6 +3,8 @@ package com.kartal.bookshop
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -11,6 +13,7 @@ import com.google.firebase.database.ValueEventListener
 import com.kartal.bookshop.Adapters.AdapterCategory
 import com.kartal.bookshop.Models.ModelCategory
 import com.kartal.bookshop.databinding.ActivityDashboardAdminBinding
+import java.lang.Exception
 
 class DashboardAdminActivity : AppCompatActivity() {
 
@@ -38,6 +41,33 @@ class DashboardAdminActivity : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
             loadCategories()
+
+            //search
+            binding.searchEt.addTextChangedListener(object : TextWatcher {
+
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+
+                }
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    //called as and when user type anything
+                    try {
+                        adapterCategory.filter.filter(s)
+                    }catch (e : Exception) {
+
+
+                    }
+                }
+
+                override fun afterTextChanged(s: Editable?) {
+
+                }
+            })
 
         }
 
@@ -73,7 +103,7 @@ class DashboardAdminActivity : AppCompatActivity() {
 
                 //set adapter to recyclerview
                 binding.categoriesRv.adapter = adapterCategory
-                
+
             }
 
             override fun onCancelled(error: DatabaseError) {

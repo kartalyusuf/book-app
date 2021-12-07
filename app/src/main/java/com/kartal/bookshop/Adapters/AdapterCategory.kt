@@ -65,6 +65,7 @@ class AdapterCategory : RecyclerView.Adapter<AdapterCategory.HolderCategory>, Fi
                 .setNegativeButton("Cancel") {a, d->
                     a.dismiss()
                 }
+                .show()
         }
     }
 

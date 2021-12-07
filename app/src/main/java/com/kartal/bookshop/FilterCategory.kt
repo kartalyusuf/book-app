@@ -54,7 +54,7 @@ class FilterCategory : android.widget.Filter{
 
     }
 
-    override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+    override fun publishResults(constraint: CharSequence?, results: FilterResults) {
         //apply filter changes
         adapterCategory.categoryArrayList = results.values as ArrayList<ModelCategory>
 
