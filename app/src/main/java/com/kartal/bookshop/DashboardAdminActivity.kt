@@ -35,6 +35,7 @@ class DashboardAdminActivity : AppCompatActivity() {
         //init firebaseauth
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
+        loadCategories()
 
         //handle click logout
         binding.logoutBtn.setOnClickListener {
