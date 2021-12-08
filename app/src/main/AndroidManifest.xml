@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".PdfAddActivity"
+            android:exported="false" />
+        <activity
             android:name=".CategoryAddActivity"
             android:exported="false" />
         <activity
@@ -25,11 +28,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".DashboardUserActivity"></activity>
-        <activity android:name=".DashboardAdminActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DashboardUserActivity" />
+        <activity android:name=".DashboardAdminActivity" />
     </application>
 
 </manifest>

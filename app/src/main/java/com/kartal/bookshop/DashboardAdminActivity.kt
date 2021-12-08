@@ -78,6 +78,10 @@ class DashboardAdminActivity : AppCompatActivity() {
 
         }
 
+        //handle click , start and add pdf page
+        binding.addPdfFab.setOnClickListener{
+            startActivity(Intent(this,PdfAddActivity::class.java))
+        }
     }
 
     private fun loadCategories() {
