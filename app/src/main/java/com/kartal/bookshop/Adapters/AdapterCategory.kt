@@ -2,6 +2,7 @@ package com.kartal.bookshop.Adapters
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.FirebaseDatabase
 import com.kartal.bookshop.FilterCategory
 import com.kartal.bookshop.Models.ModelCategory
+import com.kartal.bookshop.PdfListAdminActivity
 import com.kartal.bookshop.databinding.RowCategoryBinding
 
 class AdapterCategory : RecyclerView.Adapter<AdapterCategory.HolderCategory>, Filterable{
@@ -66,6 +68,15 @@ class AdapterCategory : RecyclerView.Adapter<AdapterCategory.HolderCategory>, Fi
                     a.dismiss()
                 }
                 .show()
+        }
+
+        //handle click , start pdf list admin activity , also pas pdf id , title
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, PdfListAdminActivity::class.java)
+            intent.putExtra("categoryId",id)
+            intent.putExtra("category",category)
+            context.startActivity(intent)
+
         }
     }
 
