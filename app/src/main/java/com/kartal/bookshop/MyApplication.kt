@@ -49,13 +49,13 @@ class MyApplication : Application() {
                     val kb = bytes/1024
                     val mb = kb/1024
                     if (mb>=1) {
-                        sizeTv.text = "${String.format("$.2f, mb")} MB"
+                        sizeTv.text = "${String.format("%.2f, mb")} MB"
 
                     }else if (kb>=1){
-                        sizeTv.text = "${String.format("$.2f, kb")} KB"
+                        sizeTv.text = "${String.format("%.2f, kb")} KB"
 
                     }else {
-                        sizeTv.text = "${String.format("$.2f, kb")} KB"
+                        sizeTv.text = "${String.format("%.2f, kb")} KB"
                     }
 
                 }
@@ -98,6 +98,7 @@ class MyApplication : Application() {
                             Log.d(TAG,"loadPdfFromUrlSinglePage: ${t.message}")
                         }
                         .onLoad { nbPages ->
+                            Log.d(TAG,"loadPdfFromUrlSinglePage: Pages: $nbPages")
                             //pdf loaded , we can set page count, pdf thumbnail
                             progressBar.visibility = View.INVISIBLE
 
@@ -107,6 +108,7 @@ class MyApplication : Application() {
 
                             }
                         }
+                        .load()
 
 
                 }

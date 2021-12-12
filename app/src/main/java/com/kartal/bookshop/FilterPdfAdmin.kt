@@ -25,7 +25,7 @@ class FilterPdfAdmin:Filter{
         if (constraint != null && constraint.isNotEmpty()) {
             //change to upper case or lowercase to avoid case sensitivity
             constraint=constraint.toString().lowercase()
-            var filteredModels = ArrayList<ModelPdf>
+            var filteredModels = ArrayList<ModelPdf>()
             for (i in filterList.indices) {
                 //validate if match
                 if (filterList[i].title.lowercase().contains(constraint)) {
