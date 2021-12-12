@@ -15,7 +15,6 @@ import com.google.firebase.storage.FirebaseStorage
 
 
 import java.util.*
-import kotlin.math.log
 
 
 class MyApplication : Application() {
@@ -72,7 +71,7 @@ class MyApplication : Application() {
             pdfTitle: String,
             pdfView: PDFView,
             progressBar: ProgressBar,
-            pagesTv :TextView
+            pagesTv: TextView?
 
         ){
             val TAG = "PDF_THUMBNNAIL_TAG"
@@ -115,28 +114,31 @@ class MyApplication : Application() {
                     Log.d(TAG,"loadPdfSize: Failed to get metadata due to ${e.message}")
                 }
         }
+
+        fun loadCategory(categoryID : String, categoryTv : TextView) {
+
+            //load category using category id from firebase
+            val ref = FirebaseDatabase.getInstance().getReference("Categories")
+            ref.child(categoryID)
+                .addListenerForSingleValueEvent(object : ValueEventListener{
+                    override fun onDataChange(snapshot: DataSnapshot) {
+
+                        //get category
+                        val category= "${snapshot.child("category").value}"
+
+                        //set category
+                        categoryTv.text = category
+
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+
+                    }
+                })
+        }
+
     }
 
-    fun loadCategory(categoryID : String, categoryTv : TextView) {
 
-        //load category using category id from firebase
-        val ref = FirebaseDatabase.getInstance().getReference("Categories")
-        ref.child(categoryID)
-            .addListenerForSingleValueEvent(object : ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-
-                    //get category
-                    val category= "${snapshot.child("category").value}"
-
-                    //set category
-                    categoryTv.text = category
-
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-            })
-    }
 
 }
