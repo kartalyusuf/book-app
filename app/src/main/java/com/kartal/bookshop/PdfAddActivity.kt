@@ -1,5 +1,6 @@
 package com.kartal.bookshop
 
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -86,6 +87,9 @@ class PdfAddActivity : AppCompatActivity() {
         })
     }
 
+    private var selectedCategoryId = ""
+    private var selectedCategoryTitle = ""
+
     private fun categoryPickDialog() {
         Log.d(TAG,"categoryPickDialog: Showing pdf category pick dialog")
 
@@ -93,7 +97,24 @@ class PdfAddActivity : AppCompatActivity() {
         val categoriesArray = arrayOfNulls<String>(categoryArrayList.size)
         for (i in categoryArrayList.indices) {
             categoriesArray[i] = categoryArrayList[i].category
-            
+
         }
+
+        //alert dialog
+        val builder =  AlertDialog.Builder(this)
+        builder.setTitle("Pick Category")
+            .setItems(categoriesArray){dialog, which ->
+                //handle item click
+                //get clicked item
+                selectedCategoryTitle = categoryArrayList[which].category
+                selectedCategoryId = categoryArrayList[which].id
+
+                //set category to textview
+                binding.categoryTv.text = selectedCategoryTitle
+
+                Log.d(TAG,"categoryPickDialog: Selected Category ID: $selectedCategoryId")
+                Log.d(TAG,"categoryPickDialog: Selected Category Title: $selectedCategoryTitle")
+            }
+            .show()
     }
 }
