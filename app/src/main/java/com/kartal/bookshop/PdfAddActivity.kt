@@ -2,6 +2,7 @@ package com.kartal.bookshop
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -54,6 +55,10 @@ class PdfAddActivity : AppCompatActivity() {
         progressDialog.setTitle("Please wait")
         progressDialog.setCanceledOnTouchOutside(false)
 
+        //handle click , show category pick dialog
+        binding.categoryTv.setOnClickListener{
+            categoryPickDialog()
+        }
 
 
 
@@ -117,4 +122,15 @@ class PdfAddActivity : AppCompatActivity() {
             }
             .show()
     }
+
+    private fun pdfPickIntent() {
+        Log.d(TAG, "pdfPickIntent: starting pdf pick intent")
+
+        val intent = Intent()
+        intent.type = "application/pdf"
+        intent.action = Intent.ACTION_GET_CONTENT
+
+    }
+
+    
 }
